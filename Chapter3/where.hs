@@ -1,5 +1,7 @@
 main = do
   print(bmiTell 54.9 1.715)
+  print(initials "momiyama" "yuzu")
+  print(calcBmis [(54,1.715)])
 
 bmiTell :: Double -> Double -> String
 bmiTell weight height
@@ -12,3 +14,12 @@ bmiTell weight height
         skinny = 18.5
         normal = 25.0
         fat = 30.0
+
+initials :: String -> String -> String
+initials firstname lastname = [f] ++ ". " ++ [l] ++ ". "
+  where (f:_) = firstname
+        (l:_) = lastname
+
+calcBmis :: [(Double,Double)] -> [Double]
+calcBmis xs = [bmi w h | (w,h) <- xs]
+  where bmi weight height = weight / height ^ 2
