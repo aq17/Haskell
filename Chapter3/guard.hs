@@ -1,6 +1,8 @@
 main = do
   print(bmiTell 18.8)
   print(bmiTell' 54 1.71)
+  print(max' 10 20)
+  print(3 `myCompare` 5)
 
 
 bmiTell :: Double -> String
@@ -18,3 +20,14 @@ bmiTell' weight height
                   \ Pffft, I bet you're ugly!"
   | weight / height ^ 2 <= 30.0 = "You're fat! Lose some weight, fatty!"
   | otherwise                   = "You're a whale, congratulations!"
+
+max' :: (Ord a) => a -> a -> a
+max' a b
+  | a <= b    = b
+  | otherwise = a
+
+myCompare :: (Ord a) => a -> a -> Ordering
+a `myCompare` b
+  | a == b  = EQ
+  | a <= b  = LT
+  | otherwise = GT
