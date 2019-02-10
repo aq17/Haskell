@@ -4,6 +4,10 @@ main = do
 
 sum' :: (Num a) => [a] -> a
 sum' xs = foldl(\acc x -> acc + x) 0 xs
+--accはなんでもいい　関数？
+--ラムダ式だった
+-- 
 
 sum'' :: (Num a) => [a] -> a
-sum'' = foldl (+) 0
+sum'' = foldl (+) 0  
+-- 2引数関数は 必ずしも必要ではない？
