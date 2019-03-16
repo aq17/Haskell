@@ -15,9 +15,12 @@ baseCircle r = Circle (Point 0 0) r
 baseRect :: Float -> Float -> Shape
 baseRect width height = Rectangle (Point 0 0) (Point width height)
 
-main = do
-  print (area (Rectangle (Point 0 0) (Point 100 100)))
-  print (area (Circle (Point 0 0) 24))
-  print (nudge (Circle (Point 34 34) 10) 5 10)
-  print (nudge (baseRect 40 100) 60 23)
 
+module Shapes
+  ( Point(..)
+  , Shape(..)
+  , area
+  , nudge
+  , baseCircle
+  , baseRect
+  ) where
