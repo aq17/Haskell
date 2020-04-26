@@ -1,0 +1,62 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.1.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: a7508d3a63b7a285665c844c2a937d7c382bbeb84ef37ec8411764f09990a6ea
+
+name:           LYHGG
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/Github username here/LYHGG#readme>
+homepage:       https://github.com/Github username here/LYHGG#readme
+bug-reports:    https://github.com/Github username here/LYHGG/issues
+author:         Author name here
+maintainer:     Author email here
+copyright:      2019 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/Github username here/LYHGG
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_LYHGG
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+  default-language: Haskell2010
+
+executable LYHGG-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_LYHGG
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      LYHGG
+    , base >=4.7 && <5
+  default-language: Haskell2010
+
+test-suite LYHGG-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_LYHGG
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      LYHGG
+    , base >=4.7 && <5
+  default-language: Haskell2010
